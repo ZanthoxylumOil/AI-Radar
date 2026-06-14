@@ -1,0 +1,148 @@
+[
+  {
+    "name": "arXiv cs.AI",
+    "url": "https://export.arxiv.org/api/query?search_query=cat:cs.AI&sortBy=submittedDate&sortOrder=descending&max_results=20",
+    "region": "global",
+    "category": "research"
+  },
+  {
+    "name": "arXiv cs.LG",
+    "url": "https://export.arxiv.org/api/query?search_query=cat:cs.LG&sortBy=submittedDate&sortOrder=descending&max_results=20",
+    "region": "global",
+    "category": "research"
+  },
+  {
+    "name": "Google News 全球AI",
+    "url": "https://news.google.com/rss/search?q=artificial+intelligence+when%3A3d&hl=en-US&gl=US&ceid=US:en",
+    "region": "global",
+    "category": "news"
+  },
+  {
+    "name": "中国AI综合新闻",
+    "url": "https://news.google.com/rss/search?q=%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD+OR+%E5%A4%A7%E6%A8%A1%E5%9E%8B+OR+AI%E8%8A%AF%E7%89%87+when%3A3d&hl=zh-CN&gl=CN&ceid=CN%3Azh-Hans",
+    "region": "china",
+    "category": "news",
+    "max_items": 30
+  },
+  {
+    "name": "机器之心",
+    "url": "https://news.google.com/rss/search?q=site%3Ajiqizhixin.com+%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD+when%3A7d&hl=zh-CN&gl=CN&ceid=CN%3Azh-Hans",
+    "region": "china",
+    "category": "technology",
+    "lookback_hours": 168
+  },
+  {
+    "name": "量子位",
+    "url": "https://news.google.com/rss/search?q=site%3Aqbitai.com+AI+when%3A7d&hl=zh-CN&gl=CN&ceid=CN%3Azh-Hans",
+    "region": "china",
+    "category": "technology",
+    "lookback_hours": 168
+  },
+  {
+    "name": "InfoQ中文",
+    "url": "https://news.google.com/rss/search?q=site%3Ainfoq.cn+AI+OR+%E5%A4%A7%E6%A8%A1%E5%9E%8B+when%3A7d&hl=zh-CN&gl=CN&ceid=CN%3Azh-Hans",
+    "region": "china",
+    "category": "technology",
+    "lookback_hours": 168
+  },
+  {
+    "name": "雷峰网",
+    "url": "https://news.google.com/rss/search?q=site%3Aleiphone.com+AI+when%3A7d&hl=zh-CN&gl=CN&ceid=CN%3Azh-Hans",
+    "region": "china",
+    "category": "technology",
+    "lookback_hours": 168
+  },
+  {
+    "name": "36氪",
+    "url": "https://news.google.com/rss/search?q=site%3A36kr.com+AI+OR+%E5%A4%A7%E6%A8%A1%E5%9E%8B+when%3A7d&hl=zh-CN&gl=CN&ceid=CN%3Azh-Hans",
+    "region": "china",
+    "category": "technology",
+    "lookback_hours": 168
+  },
+  {
+    "name": "财联社",
+    "url": "https://news.google.com/rss/search?q=site%3Acls.cn+AI+OR+%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD+when%3A7d&hl=zh-CN&gl=CN&ceid=CN%3Azh-Hans",
+    "region": "china",
+    "category": "finance",
+    "lookback_hours": 168
+  },
+  {
+    "name": "证券时报",
+    "url": "https://news.google.com/rss/search?q=site%3Astcn.com+AI+OR+%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD+when%3A7d&hl=zh-CN&gl=CN&ceid=CN%3Azh-Hans",
+    "region": "china",
+    "category": "finance",
+    "lookback_hours": 168
+  },
+  {
+    "name": "上海证券报",
+    "url": "https://news.google.com/rss/search?q=site%3Acnstock.com+AI+OR+%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD+when%3A7d&hl=zh-CN&gl=CN&ceid=CN%3Azh-Hans",
+    "region": "china",
+    "category": "finance",
+    "lookback_hours": 168
+  },
+  {
+    "name": "中国证券报",
+    "url": "https://news.google.com/rss/search?q=site%3Acs.com.cn+AI+OR+%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD+when%3A7d&hl=zh-CN&gl=CN&ceid=CN%3Azh-Hans",
+    "region": "china",
+    "category": "finance",
+    "lookback_hours": 168
+  },
+  {
+    "name": "国务院政策",
+    "url": "https://news.google.com/rss/search?q=site%3Agov.cn+(%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD+OR+%E7%AE%97%E6%B3%95+OR+%E6%95%B0%E6%8D%AE%E8%A6%81%E7%B4%A0)+when%3A30d&hl=zh-CN&gl=CN&ceid=CN%3Azh-Hans",
+    "region": "china",
+    "category": "policy",
+    "lookback_hours": 720,
+    "max_items": 30
+  },
+  {
+    "name": "中央网信办政策",
+    "url": "https://news.google.com/rss/search?q=site%3Acac.gov.cn+(%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD+OR+%E7%AE%97%E6%B3%95+OR+%E6%95%B0%E6%8D%AE)+when%3A30d&hl=zh-CN&gl=CN&ceid=CN%3Azh-Hans",
+    "region": "china",
+    "category": "policy",
+    "lookback_hours": 720
+  },
+  {
+    "name": "工业和信息化部政策",
+    "url": "https://news.google.com/rss/search?q=site%3Amiit.gov.cn+(%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD+OR+%E5%A4%A7%E6%A8%A1%E5%9E%8B+OR+%E7%AE%97%E5%8A%9B)+when%3A30d&hl=zh-CN&gl=CN&ceid=CN%3Azh-Hans",
+    "region": "china",
+    "category": "policy",
+    "lookback_hours": 720
+  },
+  {
+    "name": "国家发展改革委政策",
+    "url": "https://news.google.com/rss/search?q=site%3Andrc.gov.cn+(%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD+OR+%E6%95%B0%E5%AD%97%E7%BB%8F%E6%B5%8E)+when%3A30d&hl=zh-CN&gl=CN&ceid=CN%3Azh-Hans",
+    "region": "china",
+    "category": "policy",
+    "lookback_hours": 720
+  },
+  {
+    "name": "科学技术部政策",
+    "url": "https://news.google.com/rss/search?q=site%3Amost.gov.cn+(%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD+OR+%E7%A7%91%E6%8A%80%E5%88%9B%E6%96%B0)+when%3A30d&hl=zh-CN&gl=CN&ceid=CN%3Azh-Hans",
+    "region": "china",
+    "category": "policy",
+    "lookback_hours": 720
+  },
+  {
+    "name": "中国证监会政策",
+    "url": "https://news.google.com/rss/search?q=site%3Acsrc.gov.cn+(AI+OR+%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD+OR+%E9%87%8F%E5%8C%96+OR+%E7%A8%8B%E5%BA%8F%E5%8C%96%E4%BA%A4%E6%98%93)+when%3A30d&hl=zh-CN&gl=CN&ceid=CN%3Azh-Hans",
+    "region": "china",
+    "category": "regulation",
+    "lookback_hours": 720,
+    "max_items": 30
+  },
+  {
+    "name": "中国人民银行政策",
+    "url": "https://news.google.com/rss/search?q=site%3Apbc.gov.cn+(%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD+OR+%E9%87%91%E8%9E%8D%E7%A7%91%E6%8A%80+OR+%E6%95%B0%E5%AD%97%E9%87%91%E8%9E%8D)+when%3A30d&hl=zh-CN&gl=CN&ceid=CN%3Azh-Hans",
+    "region": "china",
+    "category": "regulation",
+    "lookback_hours": 720
+  },
+  {
+    "name": "国家市场监管总局政策",
+    "url": "https://news.google.com/rss/search?q=site%3Asamr.gov.cn+(%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD+OR+%E7%AE%97%E6%B3%95+OR+%E6%95%B0%E6%8D%AE)+when%3A30d&hl=zh-CN&gl=CN&ceid=CN%3Azh-Hans",
+    "region": "china",
+    "category": "regulation",
+    "lookback_hours": 720
+  }
+]

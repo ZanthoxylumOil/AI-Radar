@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>AI 前沿情报雷达</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <header>
+    <div>
+      <p class="eyebrow">SECURITIES INTELLIGENCE</p>
+      <h1>AI 前沿情报雷达</h1>
+      <p class="subtitle">追踪技术、产品与政策事件，研判证券行业和量化投资影响</p>
+    </div>
+    <form method="post" action="{{ url_for('run_pipeline') }}">
+      <button type="submit">立即更新情报</button>
+    </form>
+  </header>
+
+  <main>
+    <section class="metrics">
+      <article><span>事件总数</span><strong>{{ total }}</strong></article>
+      <article><span>高相关事件</span><strong>{{ high }}</strong></article>
+      <article><span>分析模式</span><strong class="model">{{ model }}</strong></article>
+    </section>
+
+    <form class="filters" method="get">
+      <label>最低相关度
+        <input type="number" name="minimum" min="0" max="100" value="{{ minimum }}">
+      </label>
+      <label>事件类型
+        <select name="event_type">
+          <option value="">全部</option>
+          {% for value in event_types %}
+          <option value="{{ value }}" {% if value == selected_type %}selected{% endif %}>{{ value }}</option>
+          {% endfor %}
+        </select>
+      </label>
+      <label>发布时间
+        <select name="days">
+          {% for value, label in date_ranges %}
+          <option value="{{ value }}" {% if value == selected_days %}selected{% endif %}>{{ label }}</option>
+          {% endfor %}
+        </select>
+      </label>
+      <button type="submit" class="secondary">筛选</button>
+    </form>
+
+    <section class="feed">
+      {% for row in results %}
+      <article class="event">
+        <div class="score">
+          <span>相关度</span>
+          <strong>{{ row.analysis.relevance_score }}</strong>
+        </div>
+        <div class="content">
+          <div class="meta">
+            <span>{{ row.analysis.event_type }}</span>
+            <span>{{ row.item.region }}</span>
+            <span>{{ row.item.published_at[:16].replace("T", " ") }}</span>
+          </div>
+          <h2><a href="{{ row.item.url }}" target="_blank" rel="noreferrer">{{ row.item.title }}</a></h2>
+          <p class="source">{{ row.item.source }} · 置信度 {{ "%.0f"|format(row.analysis.confidence * 100) }}%</p>
+          <div class="impact">
+            <p><b>证券影响</b>{{ row.analysis.securities_impact }}</p>
+            <p><b>量化影响</b>{{ row.analysis.quant_impact }}</p>
+          </div>
+          <div class="columns">
+            <div><h3>机会</h3><ul>{% for text in row.analysis.opportunities %}<li>{{ text }}</li>{% endfor %}</ul></div>
+            <div><h3>风险</h3><ul>{% for text in row.analysis.risks %}<li>{{ text }}</li>{% endfor %}</ul></div>
+            <div><h3>建议</h3><ul>{% for text in row.analysis.recommendations %}<li>{{ text }}</li>{% endfor %}</ul></div>
+          </div>
+        </div>
+      </article>
+      {% else %}
+      <div class="empty">暂无情报。先运行 <code>python -m ai_radar.cli demo</code> 载入离线演示数据。</div>
+      {% endfor %}
+    </section>
+  </main>
+  <footer>自动分析仅供研究，不构成投资建议。重大信息须回溯权威原文与监管披露。</footer>
+</body>
+</html>
